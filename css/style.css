@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Bebas Neue", cursive;
+  background: #000;
+}
+
+.eyebrows {
+  display: flex;
+  gap: 3rem;
+  visibility: hidden;
+  margin-bottom: 35px;
+  transition: 0.2s all;
+}
+
+.eyebrows .eyebrow {
+  width: 5px;
+  height: 45px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  background-color: #fff;
+  transform-origin: bottom;
+}
+
+.eyebrows .eyebrow:nth-child(1) {
+  transform: rotate(-45deg) translateY(20%);
+}
+.eyebrows .eyebrow:nth-child(3) {
+  transform: rotate(45deg) translateY(20%);
+}
+
+.eye-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  transform: translateY(-50%);
+  background-color: white;
+  clip-path: ellipse(45% 28% at 48% 50%);
+  box-shadow: 0 5px 45px rgba(0, 0, 0, 0.2);
+}
+
+.eye-container .eye {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  display: block;
+  background-color: #fff;
+  border-radius: 50%;
+  /* box-shadow: 0 5px 45px rgba(0, 0, 0, 0.2); */
+}
+
+.eye-container .eyeball {
+  top: 15%;
+  left: 15%;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #000;
+  position: absolute;
+  border: 5px solid rgba(0, 0, 0, 0.2);
+}
